@@ -1,0 +1,90 @@
+@font-face {
+    font-family: ZapfinoLT;
+    src: url('../fonts/ZapfinoExtraLTPro.otf');
+}
+@font-face {
+    font-family: ZapfinoLigatures;
+    src: url('../fonts/ZapfinoExtraLT-Ligatures.otf');
+}
+@font-face {
+    font-family: ZapfinoBold;
+    src: url('../fonts/ZapfinoForteLTPro.otf');
+}
+
+@bg-color: #2e4264;
+@parchment-dark: #76521F;
+
+body {
+    background-color: @bg-color;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: calc(100vh - 120px);
+    min-height: 600px;
+    overflow-y: scroll;
+
+    width: 85%;
+    max-width: 900px;
+
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.9);
+
+    #page {
+        padding: 20px 40px;
+
+        background-image: url('../img/parchment_repeating.jpg');
+
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 18px;
+        line-height: 24px;
+        color: darken(@parchment-dark, 5%);
+
+        box-shadow: inset 0 0 50px @parchment-dark;
+
+        a {
+            color: lighten(@parchment-dark, 10%);
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        #logo {
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            display: block;
+        }
+    }
+}
+
+
+#footer {
+    padding: 24px;
+
+    .social {
+        margin-left: auto;
+        margin-right: auto;
+
+        width: 220px;
+
+        a {
+            color: white;
+            text-decoration: none;
+
+            font-size: 19px;
+            margin-left: 1px;
+
+            opacity: 0.55;
+            &:hover {
+                opacity: .9;
+            }
+        }
+    }
+}

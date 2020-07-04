@@ -1,0 +1,69 @@
+@font-face {
+  font-family: ZapfinoLT;
+  src: url(ZapfinoExtraLTPro.otf);
+}
+@font-face {
+  font-family: ZapfinoLigatures;
+  src: url(ZapfinoExtraLT-Ligatures.otf);
+}
+@font-face {
+  font-family: ZapfinoBold;
+  src: url(ZapfinoForteLTPro.otf);
+}
+body {
+  background-color: #2e4264;
+  margin: 0;
+  padding: 0;
+}
+#content {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  height: calc(100vh - 120px);
+  min-height: 600px;
+  overflow-y: scroll;
+  width: 85%;
+  max-width: 900px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.9);
+}
+#content #page {
+  padding: 20px 40px;
+  background-image: url(parchment_repeating.jpg);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  line-height: 24px;
+  color: #62441a;
+  box-shadow: inset 0 0 50px #76521F;
+}
+#content #page a {
+  color: #9e6e2a;
+}
+#content #page h2 {
+  font-size: 22px;
+}
+#content #page #logo {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  display: block;
+}
+#footer {
+  padding: 24px;
+}
+#footer .social {
+  margin-left: auto;
+  margin-right: auto;
+  width: 220px;
+}
+#footer .social a {
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+  margin-left: 1px;
+  opacity: 0.55;
+}
+#footer .social a:hover {
+  opacity: 0.9;
+}
+
