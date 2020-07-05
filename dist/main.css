@@ -2,32 +2,28 @@
   font-family: ZapfinoLT;
   src: url(ZapfinoExtraLTPro.otf);
 }
-@font-face {
-  font-family: ZapfinoLigatures;
-  src: url(ZapfinoExtraLT-Ligatures.otf);
-}
-@font-face {
-  font-family: ZapfinoBold;
-  src: url(ZapfinoForteLTPro.otf);
-}
 body {
-  background-color: #2e4264;
+  background-color: #333;
   margin: 0;
   padding: 0;
 }
 #content {
+  position: relative;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   height: calc(100vh - 120px);
   min-height: 600px;
-  overflow-y: scroll;
   width: 85%;
   max-width: 900px;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 24px black;
+}
+#content #scroll-wrapper {
+  height: 100%;
+  overflow-y: scroll;
 }
 #content #page {
-  padding: 20px 40px;
+  padding: 20px 40px 300px 40px;
   background-image: url(parchment_repeating.jpg);
   font-family: 'Courier New', Courier, monospace;
   font-size: 18px;
@@ -90,6 +86,11 @@ body {
   opacity: 0.7;
   mix-blend-mode: darken;
   margin: 0 80px 30px 0;
+}
+#content #typewriter {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 #footer {
   padding: 24px;

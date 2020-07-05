@@ -2,16 +2,8 @@
     font-family: ZapfinoLT;
     src: url('../fonts/ZapfinoExtraLTPro.otf');
 }
-@font-face {
-    font-family: ZapfinoLigatures;
-    src: url('../fonts/ZapfinoExtraLT-Ligatures.otf');
-}
-@font-face {
-    font-family: ZapfinoBold;
-    src: url('../fonts/ZapfinoForteLTPro.otf');
-}
 
-@bg-color: #2e4264;
+@bg-color: #333;//#2e4264;
 @parchment-dark: #76521F;
 
 body {
@@ -21,21 +13,27 @@ body {
 }
 
 #content {
+    position: relative;
+
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
 
     height: calc(100vh - 120px);
     min-height: 600px;
-    overflow-y: scroll;
 
     width: 85%;
     max-width: 900px;
 
-    box-shadow: 0 0 24px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 24px black;
+
+    #scroll-wrapper {
+        height: 100%;
+        overflow-y: scroll;
+    }
 
     #page {
-        padding: 20px 40px;
+        padding: 20px 40px 300px 40px;
 
         background-image: url('../img/parchment_repeating.jpg');
 
@@ -107,6 +105,12 @@ body {
             mix-blend-mode: darken;
             margin: 0 80px 30px 0;
         }
+    }
+
+    #typewriter {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
     }
 }
 
