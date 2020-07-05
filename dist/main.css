@@ -35,18 +35,61 @@ body {
   color: #62441a;
   box-shadow: inset 0 0 50px #76521F;
 }
+#content #page #header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+#content #page #header #logo {
+  width: 300px;
+  cursor: url(pointer_hand.png), pointer;
+}
+#content #page li {
+  line-height: 28px;
+}
 #content #page a {
   color: #9e6e2a;
 }
+#content #page h1,
 #content #page h2 {
-  font-size: 22px;
+  white-space: nowrap;
 }
-#content #page #logo {
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  display: block;
+#content #page h1 {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+#content #page h2 {
+  margin-top: 50px;
+  line-height: 5px;
+  font-size: 36px;
+  font-family: 'ZapfinoLT', fantasy;
+}
+#content #page .spacer {
+  float: right;
+  clear: both;
+  width: 0;
+  height: 375px;
+}
+#content #page img {
+  clear: both;
+  width: 360px;
+  shape-outside: ellipse();
+}
+#content #page #img-rand {
+  float: left;
+  margin: 30px 40px 10px 0;
+}
+#content #page #img-robyn {
+  float: right;
+  opacity: 0.8;
+  mix-blend-mode: darken;
+  margin: 30px 0 30px 10px;
+}
+#content #page #img-philip {
+  float: left;
+  opacity: 0.7;
+  mix-blend-mode: darken;
+  margin: 0 80px 30px 0;
 }
 #footer {
   padding: 24px;
