@@ -12,6 +12,8 @@ function loadAsset(el$, asset, attr = 'src') {
     el$.attr(attr, `./dist/${asset}`);
 }
 
+let loaded = false;
+
 $(document).ready(() => {
     const page$ = $('#page');
     const rand$ = $('#img-rand');
@@ -30,8 +32,14 @@ $(document).ready(() => {
 
     }
 
-    philip$.on('load', () => updateSpacers());
-    $(window).on('resize orientationchange focus', () => updateSpacers());
+    $(window)
+        .on('resize focus', () => { if (loaded) updateSpacers() })
+        .on('orientationchange', () => window.location.reload());
+
+    philip$.on('load', () => {
+        loaded = true;
+        updateSpacers();
+    });
 
     loadAsset($('#logo'), MystLogo);
     loadAsset($('#typewriter'), Typewriter);
