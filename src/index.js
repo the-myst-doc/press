@@ -31,7 +31,7 @@ $(document).ready(() => {
     }
 
     philip$.on('load', () => updateSpacers());
-    $(window).resize(() => updateSpacers());
+    $(window).on('resize orientationchange focus', () => updateSpacers());
 
     loadAsset($('#logo'), MystLogo);
     loadAsset($('#typewriter'), Typewriter);

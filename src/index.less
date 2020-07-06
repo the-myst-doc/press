@@ -131,3 +131,39 @@ body {
         }
     }
 }
+
+@media only screen and (max-device-width: 850px) {
+    #page {
+        margin: 0;
+
+        li {
+            line-height: 44px;
+        }
+    }
+}
+
+@media only screen and (max-device-width: 850px) and (orientation: portrait) {
+    #page {
+        line-height: 36px;
+
+        #header #logo {
+            width: 50%;
+        }
+
+        .spacer {
+            height: 500px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+        h2 {
+            font-size: 56px;
+        }
+    }
+
+    .social {
+        transform-origin: 50% 100%;
+        transform: scale(2);
+    }
+}
