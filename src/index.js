@@ -8,16 +8,31 @@ import Robyn from '../img/robyn.png';
 import Philip from '../img/philip.png';
 
 // Load assets dynamically
-function loadAsset(el, asset, attr = 'src') {
-    $(el).attr(attr, `./dist/${asset}`);
+function loadAsset(el$, asset, attr = 'src') {
+    el$.attr(attr, `./dist/${asset}`);
 }
 
 $(document).ready(() => {
-    $('#page').append(PageContent.join('<p>'));
+    const page$ = $('#page');
+    const rand$ = $('#img-rand');
+    const robyn$ = $('#img-robyn');
+    const philip$ = $('#img-philip');
 
-    loadAsset('#logo', MystLogo);
-    loadAsset('#typewriter', Typewriter);
-    loadAsset('#img-rand', Rand);
-    loadAsset('#img-robyn', Robyn);
-    loadAsset('#img-philip', Philip);
+    page$.append(PageContent.join('<p>'));
+    const bottomLink$ = page$.find('a').last();
+
+    function updateSpacers() {
+        const heightDelta = bottomLink$.position().top - rand$.position().top;
+        $('.spacer.dynamic').css('height', heightDelta / 2 - 410);
+
+    }
+
+    philip$.on('load', () => updateSpacers());
+    $(window).resize(() => updateSpacers());
+
+    loadAsset($('#logo'), MystLogo);
+    loadAsset($('#typewriter'), Typewriter);
+    loadAsset(rand$, Rand);
+    loadAsset(robyn$, Robyn);
+    loadAsset(philip$, Philip);
 });
