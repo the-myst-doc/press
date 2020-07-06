@@ -70,6 +70,8 @@ body {
   clear: both;
   width: 360px;
   shape-outside: ellipse();
+  mix-blend-mode: darken;
+  opacity: 0.75;
 }
 #content #page #img-rand {
   float: left;
@@ -77,14 +79,10 @@ body {
 }
 #content #page #img-robyn {
   float: right;
-  opacity: 0.8;
-  mix-blend-mode: darken;
   margin: 30px 0 30px 10px;
 }
 #content #page #img-philip {
   float: left;
-  opacity: 0.7;
-  mix-blend-mode: darken;
   margin: 0 80px 30px 0;
 }
 #content #typewriter {
