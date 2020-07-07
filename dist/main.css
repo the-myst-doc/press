@@ -128,8 +128,8 @@ body {
 }
 @media only screen and (max-device-width: 850px) and (orientation: portrait) {
   #page {
-    -webkit-text-adjust: 300%;
-    text-size-adjust: 300%;
+    -webkit-text-adjust: 200%;
+    text-size-adjust: 200%;
   }
   #page #header #logo {
     width: 60%;
