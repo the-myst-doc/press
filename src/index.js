@@ -15,18 +15,15 @@ function loadAsset(el$, asset, attr = 'src') {
 let loaded = false;
 
 $(document).ready(() => {
-    const page$ = $('#page');
+    const pageContent$ = $('#page-content');
     const rand$ = $('#img-rand');
     const robyn$ = $('#img-robyn');
     const philip$ = $('#img-philip');
 
-    page$.append(PageContent.join('<p>'));
-    const bottomLink$ = page$.find('a').last();
+    pageContent$.html(PageContent.join('<p>'));
+    const bottomLink$ = pageContent$.find('a').last();
 
     function updateSpacers() {
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-
         const heightDelta = bottomLink$.position().top - rand$.position().top;
         $('.spacer.dynamic').css('height', heightDelta / 2 - 410);
 
