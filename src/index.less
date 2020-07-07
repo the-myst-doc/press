@@ -19,13 +19,13 @@ body {
 
 #scroll-wrapper {
     height: 100vh;
-    height: -webkit-fill-available;
+    height: calc(var(--vh, 1vh) * 100);
     overflow-y: scroll;
 }
 
 #page {
     margin: 40px 40px 0 40px;
-    padding: 30px 7vw 35vw 7vw;
+    padding: 30px 7vw 350px 7vw;
 
     background-image: url('../img/parchment_repeating.jpg');
 
@@ -180,6 +180,8 @@ body {
 
 @media only screen and (max-device-width: 850px) and (orientation: landscape) {
     #page {
+        padding-bottom: 175px;
+
         .spacer {
             height: 300px;
         }
