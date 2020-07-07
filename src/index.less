@@ -134,12 +134,12 @@ body {
 #typewriter {
     width: 100%;
     position: absolute;
-    bottom: calc(250px - 30vw);
+    top: 68vh;
 }
 
-
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 935px) {
     #typewriter {
+        top: unset;
         bottom: 0;
     }
 }
@@ -173,6 +173,7 @@ body {
     }
 
     #typewriter {
+        top: unset;
         bottom: 0;
     }
 }
@@ -182,8 +183,5 @@ body {
         .spacer {
             height: 300px;
         }
-    }
-    #typewriter {
-        bottom: -140px;
     }
 }
