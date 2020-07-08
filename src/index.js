@@ -32,7 +32,7 @@ $(document).ready(() => {
     }
 
     $(window)
-        .on('resize focus', () => { if (loaded === 3) updateSpacers() })
+        .on('orientationchange resize focus', () => { if (loaded === 3) updateSpacers() })
 
     const onLoad = () => {
         loaded += 1;

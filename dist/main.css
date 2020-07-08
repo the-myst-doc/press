@@ -131,8 +131,8 @@ body {
   #page {
     font-size: 20px;
     line-height: 24px;
-    word-break: break-word;
     hyphens: auto;
+    -webkit-hyphens: auto;
   }
   #page #header #logo {
     width: 60%;
