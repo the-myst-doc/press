@@ -29,12 +29,7 @@ $(document).ready(() => {
         $('.spacer.dynamic').css('height', heightDelta / 2 - 410);
     }
 
-    $(window)
-        .on('resize focus', () => { if (loaded === 3) updateSpacers() })
-        .on('orientationchange', () => {
-            // refresh after leaving landscape
-            if (window.innerWidth > window.innerHeight) window.location.reload();
-        });
+    $(window).on('orientationchange resize focus', () => { if (loaded === 3) updateSpacers() });
 
     const onLoad = () => {
         loaded += 1;
