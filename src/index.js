@@ -25,9 +25,6 @@ $(document).ready(() => {
     const bottomLink$ = pageContent$.find('a').last();
 
     function updateSpacers() {
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-
         const heightDelta = bottomLink$.position().top - rand$.position().top;
         $('.spacer.dynamic').css('height', heightDelta / 2 - 410);
     }
