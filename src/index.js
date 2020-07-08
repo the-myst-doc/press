@@ -33,7 +33,10 @@ $(document).ready(() => {
 
     $(window)
         .on('resize focus', () => { if (loaded === 3) updateSpacers() })
-        .on('orientationchange', () => window.location.reload());
+        .on('orientationchange', () => {
+            // refresh after leaving landscape
+            if (window.innerWidth > window.innerHeight) window.location.reload();
+        });
 
     const onLoad = () => {
         loaded += 1;
