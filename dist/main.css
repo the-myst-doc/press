@@ -125,14 +125,14 @@ body {
 @media only screen and (max-device-width: 850px) {
   #page {
     margin: 0;
+    hyphens: auto;
+    -webkit-hyphens: auto;
   }
 }
 @media only screen and (max-device-width: 850px) and (orientation: portrait) {
   #page {
     font-size: 20px;
     line-height: 24px;
-    hyphens: auto;
-    -webkit-hyphens: auto;
   }
   #page #header #logo {
     width: 60%;
@@ -148,7 +148,7 @@ body {
     margin-top: 16px;
   }
   #page > img {
-    width: 65%;
+    width: 60%;
   }
   #typewriter {
     top: unset;
