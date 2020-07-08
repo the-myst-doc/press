@@ -16,6 +16,7 @@ function loadAsset(el$, asset, attr = 'src') {
 }
 
 let loaded = 0;
+let wasPortrait = 1;
 
 $(document).ready(() => {
     const pageContent$ = $('#page-content');
@@ -27,13 +28,16 @@ $(document).ready(() => {
     const bottomLink$ = pageContent$.find('a').last();
 
     function updateSpacers() {
+        const isPortrait = window.innerHeight > window.innerWidth;
+        if (isPortrait === wasPortrait && isMobile()) return; // only update layout once per rotation
+    
         const heightDelta = bottomLink$.position().top - rand$.position().top;
         $('.spacer.dynamic').css('height', heightDelta / 2 - 410);
+
+        wasPortrait = isPortrait;
     }
 
-    $(window)
-        .on('orientationchange focus', () => { if (loaded === 3) updateSpacers() })
-        .on('resize', () => { if (loaded === 3 && !isMobile()) updateSpacers() });
+    $(window).on('orientationchange focus resize', () => { if (loaded === 3) updateSpacers() })
 
     const onLoad = () => {
         loaded += 1;

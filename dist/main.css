@@ -151,7 +151,7 @@ body {
 @media only screen and (max-device-width: 850px) and (orientation: landscape) {
   #page {
     -webkit-text-size-adjust: 100%;
-    padding: 30px 7vw 250px 7vw;
+    padding-bottom: 250px;
   }
   #page .spacer {
     height: 300px;
