@@ -128,12 +128,12 @@ body {
     hyphens: auto;
     -webkit-hyphens: auto;
   }
-}
-@media only screen and (max-device-width: 850px) and (orientation: portrait) {
   #scroll-wrapper,
   body {
     height: -webkit-fill-available;
   }
+}
+@media only screen and (max-device-width: 850px) and (orientation: portrait) {
   #page {
     font-size: 20px;
     line-height: 24px;
