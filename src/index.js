@@ -24,6 +24,8 @@ $(document).ready(() => {
     const bottomLink$ = pageContent$.find('a').last();
 
     function updateSpacers() {
+        window.scrollTo(0, 1);
+
         const vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
 
