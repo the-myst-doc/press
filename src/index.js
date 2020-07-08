@@ -6,6 +6,7 @@ import Typewriter from '../img/typewriter.png';
 import Rand from '../img/rand.png';
 import Robyn from '../img/robyn.png';
 import Philip from '../img/philip.png';
+import PressThumbnail from '../img/tmd_press_thumbnail.png';
 
 // Load assets dynamically
 function loadAsset(el$, asset, attr = 'src') {
