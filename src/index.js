@@ -12,7 +12,7 @@ function loadAsset(el$, asset, attr = 'src') {
     el$.attr(attr, `./dist/${asset}`);
 }
 
-let loaded = false;
+let loaded = 0;
 
 $(document).ready(() => {
     const pageContent$ = $('#page-content');
@@ -36,10 +36,13 @@ $(document).ready(() => {
         .on('resize focus', () => { if (loaded) updateSpacers() })
         .on('orientationchange', () => window.location.reload());
 
-    philip$.on('load', () => {
-        loaded = true;
-        updateSpacers();
-    });
+    const onLoad = () => {
+        loaded += 1;
+        if (loaded === 3) { // Only after all images have loaded
+            updateSpacers();
+        }
+    }
+    [rand$, robyn$, philip$].map((img$) => img$.on('load', onLoad));
 
     loadAsset($('#logo'), MystLogo);
     loadAsset($('#typewriter'), Typewriter);
