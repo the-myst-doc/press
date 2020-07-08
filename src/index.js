@@ -8,6 +8,8 @@ import Robyn from '../img/robyn.png';
 import Philip from '../img/philip.png';
 import PressThumbnail from '../img/tmd_press_thumbnail.png';
 
+const isMobile = () => Boolean(window.matchMedia("only screen and (max-device-width: 850px)").matches);
+
 // Load assets dynamically
 function loadAsset(el$, asset, attr = 'src') {
     el$.attr(attr, `./dist/${asset}`);
@@ -29,7 +31,9 @@ $(document).ready(() => {
         $('.spacer.dynamic').css('height', heightDelta / 2 - 410);
     }
 
-    $(window).on('orientationchange resize focus', () => { if (loaded === 3) updateSpacers() });
+    $(window)
+        .on('orientationchange focus', () => { if (loaded === 3) updateSpacers() })
+        .on('resize', () => { if (loaded === 3 && !isMobile()) updateSpacers() });
 
     const onLoad = () => {
         loaded += 1;

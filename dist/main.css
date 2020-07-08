@@ -149,9 +149,9 @@ body {
   }
 }
 @media only screen and (max-device-width: 850px) and (orientation: landscape) {
-  -webkit-text-size-adjust: 100%;
   #page {
-    padding-bottom: 250px;
+    -webkit-text-size-adjust: 100%;
+    padding: 30px 7vw 250px 7vw;
   }
   #page .spacer {
     height: 300px;
