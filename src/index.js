@@ -29,12 +29,10 @@ $(document).ready(() => {
 
         const heightDelta = bottomLink$.position().top - rand$.position().top;
         $('.spacer.dynamic').css('height', heightDelta / 2 - 410);
-
     }
 
     $(window)
-        .on('resize focus', () => { if (loaded) updateSpacers() })
-        .on('orientationchange', () => window.location.reload());
+        .on('resize focus', () => { if (loaded === 3) updateSpacers() })
 
     const onLoad = () => {
         loaded += 1;
