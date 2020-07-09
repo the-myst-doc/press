@@ -20,6 +20,7 @@ let wasPortrait = 1;
 
 $(document).ready(() => {
     const pageContent$ = $('#page-content');
+    const spacers$ = $('.spacer.dynamic');
     const rand$ = $('#img-rand');
     const robyn$ = $('#img-robyn');
     const philip$ = $('#img-philip');
@@ -30,9 +31,12 @@ $(document).ready(() => {
     function updateSpacers() {
         const isPortrait = window.innerHeight > window.innerWidth;
         if (isPortrait === wasPortrait && isMobile()) return; // only update layout once per rotation
-    
-        const heightDelta = bottomLink$.position().top - rand$.position().top;
-        $('.spacer.dynamic').css('height', (heightDelta - robyn$.height() - philip$.height() - rand$.height())/2 - 50);
+
+        if (isMobile()) spacers$.css('height', 0);
+        setTimeout(() => {
+            const heightDelta = bottomLink$.position().top - rand$.position().top;
+            spacers$.css('height', (heightDelta - robyn$.height() - philip$.height() - rand$.height())/2 - 50);
+        }, 0);
 
         wasPortrait = isPortrait;
     }
