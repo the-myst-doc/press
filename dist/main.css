@@ -121,6 +121,9 @@ body {
     hyphens: auto;
     -webkit-hyphens: auto;
   }
+  #page a {
+    word-break: break-all;
+  }
 }
 @media only screen and (max-device-width: 850px) and (orientation: portrait) {
   #page {
@@ -157,7 +160,7 @@ body {
     height: 300px;
   }
   #typewriter {
-    top: 68vh;
+    top: 66vh;
     bottom: unset;
   }
 }

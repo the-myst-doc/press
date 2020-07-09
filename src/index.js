@@ -32,7 +32,7 @@ $(document).ready(() => {
         if (isPortrait === wasPortrait && isMobile()) return; // only update layout once per rotation
     
         const heightDelta = bottomLink$.position().top - rand$.position().top;
-        $('.spacer.dynamic').css('height', heightDelta / 2 - 410);
+        $('.spacer.dynamic').css('height', (heightDelta - robyn$.height() - philip$.height() - rand$.height())/2 - 50);
 
         wasPortrait = isPortrait;
     }
