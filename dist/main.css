@@ -133,7 +133,7 @@ body {
     -webkit-hyphens: auto;
   }
   #page a {
-    word-break: break-all;
+    word-break: break-word;
   }
 }
 @media only screen and (max-device-width: 850px) and (orientation: portrait) {
@@ -156,9 +156,6 @@ body {
   }
   #page > img {
     width: 60%;
-  }
-  #page #img-philip {
-    margin-right: 8px;
   }
   #typewriter-wrapper {
     width: 140%;
