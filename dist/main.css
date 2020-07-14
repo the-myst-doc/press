@@ -104,13 +104,24 @@ body {
 #page .social a:hover {
   opacity: 1;
 }
-#typewriter {
+#typewriter-wrapper {
   width: 100%;
   position: fixed;
   top: 68vh;
 }
+#typewriter-wrapper img {
+  width: 100%;
+}
+#typewriter-wrapper #ribbon {
+  cursor: url(pointer_hand.png), pointer;
+  width: 100%;
+  height: 25%;
+  position: absolute;
+  top: 35%;
+  left: 0;
+}
 @media only screen and (max-width: 1024px) {
-  #typewriter {
+  #typewriter-wrapper {
     top: unset;
     bottom: 0;
   }
@@ -146,9 +157,12 @@ body {
   #page > img {
     width: 60%;
   }
-  #typewriter {
+  #typewriter-wrapper {
+    width: 140%;
     top: unset;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 @media only screen and (max-device-width: 850px) and (orientation: landscape) {
@@ -159,8 +173,8 @@ body {
   #page .spacer {
     height: 300px;
   }
-  #typewriter {
-    top: 66vh;
+  #typewriter-wrapper {
+    top: 60vh;
     bottom: unset;
   }
 }
