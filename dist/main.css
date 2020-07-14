@@ -131,7 +131,6 @@ body {
     margin: 0;
     hyphens: auto;
     -webkit-hyphens: auto;
-    padding-bottom: 250px;
   }
   #page a {
     hyphens: none;
@@ -141,6 +140,7 @@ body {
 }
 @media only screen and (max-device-width: 850px) and (orientation: portrait) {
   #page {
+    padding-bottom: 350px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -173,6 +173,7 @@ body {
 }
 @media only screen and (max-device-width: 850px) and (orientation: landscape) {
   #page {
+    padding-bottom: 250px;
     -webkit-text-size-adjust: 100%;
   }
   #page .spacer {
