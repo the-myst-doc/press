@@ -107,7 +107,7 @@ body {
 #typewriter-wrapper {
   width: 100%;
   position: fixed;
-  top: 68vh;
+  top: 67vh;
 }
 #typewriter-wrapper img {
   width: 100%;
@@ -157,6 +157,9 @@ body {
   #page > img {
     width: 60%;
   }
+  #page #img-philip {
+    margin-right: 8px;
+  }
   #typewriter-wrapper {
     width: 140%;
     top: unset;
@@ -174,7 +177,7 @@ body {
     height: 300px;
   }
   #typewriter-wrapper {
-    top: 60vh;
+    top: 61vh;
     bottom: unset;
   }
 }
