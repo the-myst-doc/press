@@ -160,6 +160,9 @@ body {
   #page > img {
     width: 60%;
   }
+  #page .social a {
+    margin: 0;
+  }
   #typewriter-wrapper {
     width: 140%;
     top: unset;
