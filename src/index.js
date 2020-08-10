@@ -35,7 +35,7 @@ $(document).ready(() => {
         if (isMobile()) spacers$.css('height', 0);
         setTimeout(() => {
             const heightDelta = bottomLink$.position().top - rand$.position().top;
-            spacers$.css('height', (heightDelta - robyn$.height() - philip$.height() - rand$.height())/2 - 50);
+            spacers$.css('height', (heightDelta - robyn$.height() - philip$.height() - rand$.height())/2 - 55);
         }, 0);
 
         wasPortrait = isPortrait;

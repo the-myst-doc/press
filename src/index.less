@@ -46,6 +46,24 @@ body {
         font-style: italic;
     }
 
+    #resources {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 14px 0;
+
+        > div {
+            display: inline-block;
+            padding: 8px 10px;
+            font-size: 20px;
+
+            a {
+                padding-left: 10px;
+            }
+        }
+    }
+
     li {
         line-height: 28px;
     }
@@ -62,9 +80,13 @@ body {
         }
     }
     h1 {
-        margin-top: 0;
+        margin: 0;
         text-transform: uppercase;
         font-size: 24px;
+        a {
+            color: @parchment-dark;
+            text-decoration: none;
+        }
     }
     h2 {
         margin-top: 50px;
@@ -78,7 +100,7 @@ body {
         float: right;
         clear: both;
         width: 0;
-        height: 200px;
+        height: 180px;
     }
 
     > img {
@@ -213,6 +235,11 @@ body {
 
         .spacer {
             height: 300px;
+        }
+
+        #resources {
+            padding-left: 40px;
+            padding-right: 40px;
         }
     }
 
